@@ -48,6 +48,7 @@ end
 
 gem "rails-i18n"
 gem "devise-i18n"
+gem "select2-rails"
 
 group :development do
   gem 'faker'
