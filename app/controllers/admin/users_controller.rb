@@ -20,6 +20,7 @@ class Admin::UsersController < ApplicationController
      protected
 
      def user_params
-       params.require(:user).permit(:email, :group_ids => [])
+
+       params.require(:user).permit(:time_zone)
      end
 end
