@@ -15,7 +15,8 @@ namespace :dev do
     20.times do |i|
       topic = Event.create!( :name => Faker::Cat.name,
                              :description => Faker::Lorem.paragraph,
-                             :user_id => users.sample.id )
+                             :user_id => users.sample.id
+                             :friendly => Faker::cat.na)
       puts "Generate Event #{i}"
     end
   end
