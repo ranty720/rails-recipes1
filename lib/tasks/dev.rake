@@ -12,7 +12,7 @@ namespace :dev do
       puts "Generate User #{i}"
     end
 
-    20.times do |i|
+    50.times do |i|
       topic = Event.create!( :name => Faker::Cat.name,
                              :description => Faker::Lorem.paragraph,
                              :user_id => users.sample.id )
