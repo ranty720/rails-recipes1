@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :category, :optional => true
   has_many :tickets, :dependent => :destroy, :inverse_of => :event
+  has_many :registrations, :dependent => :destroy
 
  STATUS = ["draft", "public", "private"]
  validates_inclusion_of :status, :in => STATUS
@@ -25,5 +26,5 @@ class Event < ApplicationRecord
 
  include RankedModel
  ranks :row_order
- 
+
 end
